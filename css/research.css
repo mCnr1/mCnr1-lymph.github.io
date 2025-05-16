@@ -1,0 +1,141 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #BBEBD8;
+  font-family: 'Roboto', sans-serif;
+  color: #222222;
+}
+
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.site-header {
+  display: flex;                   
+  justify-content: space-between; 
+  align-items: center;              
+  padding: 20px 32px;               
+  background-color: #BBEBD8; 
+}
+
+.site-header h1 {
+  margin: 0;                        
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 48px;                  
+  color: #5FA65A;
+  text-shadow: 2px 2px 0 #A64D79;
+  position: relative;
+  z-index: 1;
+}
+
+.site-header .btn {
+  text-decoration: none;            
+  background-color: #CCFFCC;
+  color: #222222;                   
+  padding: 12px 24px;                
+  border-radius: 6px;               
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.site-header .btn:hover {
+  transform: translateY(-2px);      
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.paper {
+  text-align: center;
+}
+
+.paper-title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.paper-card {
+  background-color: #CCFFCC;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 32px;
+}
+
+.site-footer .btn {
+  text-decoration: none;
+  background-color: #CCFFCC;
+  color: #222222;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.site-footer .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#background-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#background-svg svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(4);
+  width: auto;
+  height: 100vh;
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+
+  .site-header,
+  .site-footer {
+    padding: 16px;
+  }
+
+  .research-list {
+    padding: 16px;
+    gap: 24px;
+  }
+
+  .paper-card {
+    padding: 24px;
+  }
+
+  .paper-title {
+    font-size: 20px;
+  }
+}

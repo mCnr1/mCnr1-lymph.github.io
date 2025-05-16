@@ -1,0 +1,145 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #BBEBD8;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.site-header {
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 1;
+}
+
+.site-header h1 {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 3rem;
+  color: #5FA65A;
+  text-shadow: 2px 2px 0 #A64D79;
+}
+
+.hero {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-left .square {
+  background-color: rgba(197, 255, 181, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 480px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.hero-right {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: #B8E4B1;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 110px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 0 0 3px #ffa5e5;
+}
+
+.c1 { top: 0; left: 50%; transform: translateX(-50%); }
+.c2 { top: 50%; right: 0; transform: translateY(-50%); }
+.c3 { bottom: 0; right: 10%; }
+.c4 { bottom: 0; left: 10%; }
+.c5 { top: 50%; left: 0; transform: translateY(-50%); }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center img {
+  width: 80px;
+  height: auto;
+}
+
+/* absolutely centre the big SVG in .hero */
+#box {
+  position: absolute;
+  top: 74%;
+  left: 74%;
+  width: 500px;    /* match your SVG viewBox */
+  height: 500px;   /* ditto */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;     /* behind everything else */
+}
+
+/* make the <svg> fill its container */
+#box svg {
+  width: 60%;
+  height: 60%;
+  display: block;
+}
+
+#background-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#background-svg svg {
+  height: 100vh;
+  width: auto;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.ring-button {
+  animation: ring 1.5s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0%, 100% {
+    box-shadow: 0 0 0 3px #ffa5e5;
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(255,165,229,0);
+  }
+}

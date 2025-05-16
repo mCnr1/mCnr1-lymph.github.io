@@ -1,0 +1,153 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #BBEBD8;
+  font-family: 'Roboto', sans-serif;
+  color: #222222;
+}
+
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.site-header {
+  display: flex;                   
+  justify-content: space-between; 
+  align-items: center;              
+  padding: 20px 32px;               
+  background-color: #BBEBD8; 
+}
+
+.site-header h1 {
+  margin: 0;                        
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 48px;                  
+  color: #5FA65A;
+  text-shadow: 2px 2px 0 #A64D79;
+}
+
+.site-header .btn {
+  text-decoration: none;            
+  background-color: #CCFFCC;
+  color: #222222;                   
+  padding: 12px 24px;                
+  border-radius: 6px;               
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 1;
+}
+.site-header .btn:hover {
+  transform: translateY(-2px);      
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;           
+  gap: 40px;                 
+  padding: 32px;                    
+  max-width: 900px;                 
+  margin: 0 auto;                 
+}
+
+.resource-card {
+  display: grid;
+  grid-template-columns: auto 1fr;  
+  align-items: center;
+  gap: 20px;                        
+  background-color: #CCFFCC;        
+  border-radius: 10px;              
+  box-shadow: 2px 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;                 
+}
+
+.resource-card.reverse {
+  grid-template-columns: 1fr auto;  
+}
+
+.card-image {
+  background-color: #FFFFFF;        
+  padding: 16px;                    
+  display: flex;                    
+  justify-content: center;
+  align-items: center;
+}
+.card-image img {
+  width: 120px;                     
+  height: auto;                     
+  display: block;
+}
+
+.card-content {
+  padding: 24px;                    
+}
+.card-content p {
+  margin: 0;
+  font-size: 18px;                  
+}
+.card-content a {
+  text-decoration: none;
+  color: #222222;
+}
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 32px;                    
+}
+.site-footer .btn {
+  text-decoration: none;
+  background-color: #CCFFCC;
+  color: #222222;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 1;
+}
+.site-footer .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#background-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#background-svg svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(4);
+  transform-origin: center;
+  width: auto;
+  height: 100vh;
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  .resources-list {
+    padding: 16px;
+    gap: 24px;
+  }
+  .resource-card,
+  .resource-card.reverse {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .card-image {
+    padding: 16px 0;
+  }
+}
