@@ -139,3 +139,20 @@ body {
     font-size: 20px;
   }
 }
+
+.read-more-link {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  background-color: #A64D79;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.read-more-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
