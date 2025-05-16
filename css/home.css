@@ -92,19 +92,17 @@ body, html {
   height: auto;
 }
 
-/* absolutely centre the big SVG in .hero */
 #box {
   position: absolute;
   top: 74%;
   left: 74%;
-  width: 500px;    /* match your SVG viewBox */
-  height: 500px;   /* ditto */
+  width: 500px;
+  height: 500px;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: -1;     /* behind everything else */
+  z-index: -1;
 }
 
-/* make the <svg> fill its container */
 #box svg {
   width: 60%;
   height: 60%;
@@ -129,6 +127,10 @@ body, html {
   left: 50%;
   top: 0;
   transform: translateX(-50%);
+}
+
+.card-header {
+  text-align: center;
 }
 
 .ring-button {
